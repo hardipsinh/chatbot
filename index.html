@@ -202,7 +202,7 @@
         document.getElementById('set-port').value = p;
         document.getElementById('set-token').value = t;
 
-        WS_URL = `ws://${h}:${p}`;
+        WS_URL = `${h}:${p}`;
         TOKEN = t;
         connect();
         
