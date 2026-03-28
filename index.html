@@ -232,7 +232,7 @@
         localStorage.setItem('p', document.getElementById('set-port').value);
         localStorage.setItem('t', document.getElementById('set-token').value);
         
-        WS_URL = `ws://${localStorage.getItem('h')}:${localStorage.getItem('p')}`;
+        WS_URL = `${localStorage.getItem('h')}:${localStorage.getItem('p')}`;
         TOKEN = localStorage.getItem('t');
         
         isManualReset = true;
