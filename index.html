@@ -148,7 +148,7 @@
 
 <div class="input-container">
     <div class="input-box">
-        <textarea id="userInput" placeholder="Ask OpenClaw anything..." rows="1" disabled></textarea>
+        <textarea id="userInput" placeholder="Ask Anna anything..." rows="1" disabled></textarea>
         <button id="send-btn" disabled>Send</button>
     </div>
 </div>
@@ -248,7 +248,7 @@
         if (role !== 'system') {
             const meta = document.createElement('div');
             meta.className = 'msg-meta';
-            meta.innerText = role === 'sent' ? 'You' : 'OpenClaw';
+            meta.innerText = role === 'sent' ? 'You' : 'Anna';
             row.appendChild(meta);
 
             const bubble = document.createElement('div');
@@ -278,7 +278,7 @@
                 "params": {
                     "minProtocol": 3, "maxProtocol": 3, "auth": { "token": TOKEN },
                     "client": { "id": "openclaw-control-ui", "mode": "webchat", "version": "dev", "platform": "win32" },
-                    "scopes": ["operator.read", "operator.write", "admin","operator.admin"]
+                    "scopes": ["operator.read", "operator.write", "admin","operator.admin","cli","operator.cli"]
                 }
             }));
         };
