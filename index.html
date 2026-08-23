@@ -759,26 +759,12 @@
 
         handleTyping();
     }
-        } else if (currentCallType === 'audio') {
-            if (isCallMinimized) {
-                audioOverlay.classList.add('audio-pip-minimized');
-                audioOverlay.style.top = '12px';
-                audioOverlay.style.right = '16px';
-                audioOverlay.style.left = 'auto';
-                audioOverlay.style.bottom = 'auto';
-                if (badge) badge.classList.remove('hidden');
-                showToast("Audio call minimized", "info");
-            } else {
-                audioOverlay.classList.remove('audio-pip-minimized');
-                audioOverlay.style.top = '0px';
-        function toggleAttachMenu() {
-            const menu = document.getElementById('attach-menu');
-            const emojiPicker = document.getElementById('emoji-picker');
-            if (emojiPicker) emojiPicker.classList.add('hidden');
-            menu.classList.toggle('hidden');
-        }
-        }
-        lucide.createIcons();
+
+    function toggleAttachMenu() {
+        const menu = document.getElementById('attach-menu');
+        const emojiPicker = document.getElementById('emoji-picker');
+        if (emojiPicker) emojiPicker.classList.add('hidden');
+        menu.classList.toggle('hidden');
     }
 
     function makePipDraggable(el) {
@@ -990,11 +976,6 @@
             document.execCommand('copy');
             showToast("Token copied");
         }
-    }
-
-    function toggleAttachMenu() {
-        const menu = document.getElementById('attach-menu');
-        menu.classList.toggle('hidden');
     }
 
     function triggerFileSelect(accept) {
